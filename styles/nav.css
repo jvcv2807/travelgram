@@ -3,7 +3,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  padding-block: 20px;
+  padding-block: 1rem;
 }
 
 nav .logo { flex-shrink: 0; }
@@ -11,7 +11,7 @@ nav ul {
   display: flex;
   list-style: none;
   align-items: center;
-  gap: 24px;
+  gap: 1rem;
   padding-block: 8px;
 }
 
@@ -22,7 +22,11 @@ nav .avatar {
   border-radius: 50%;
 }
 
-@media (max-width: 600px) {
-  nav ul { gap: 16px; }
-  nav .text-link { display: none; }
+nav .text-link { display: none; }
+nav ul { flex-shrink: 0; }
+
+@media (width >= 80rem) {
+  nav { padding-block: 1.25rem; }
+  nav ul { gap: 1.5rem; }
+  nav .text-link { display: list-item; }
 }

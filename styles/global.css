@@ -11,10 +11,11 @@
   --text-color-primary: #313131;
   --text-color-secondary: #6c6c6c;
   --font-family: "Poppins", Arial, sans-serif;
-  --text-lg: bold 32px/125% var(--font-family);
+  --text-lg: bold 1.5rem/125% var(--font-family);
   --text-md: 14px/170% var(--font-family);
   --text-sm: 12px/170% var(--font-family);
   --text: 16px/1.5 var(--font-family);
+  --px-page: 1rem;
 }
 
 body {
@@ -30,8 +31,8 @@ a:focus-visible { outline: 3px solid var(--brand-color); outline-offset: 5px; }
 
 .container {
   width: 100%;
-  padding-inline: 32px;
-  max-width: 1280px;
+  padding-inline: var(--px-page);
+  max-width: 80rem;
   margin-inline: auto;
 }
 
@@ -39,6 +40,10 @@ a:focus-visible { outline: 3px solid var(--brand-color); outline-offset: 5px; }
 .skip-link { position: absolute; top: 8px; left: 8px; transform: translateY(-200%); }
 .skip-link:focus { transform: none; padding: 8px 16px; background: white; z-index: 1; }
 
-@media (max-width: 600px) {
-  .container { padding-inline: 16px; }
+@media (width >= 40rem) {
+  :root { --px-page: 2rem; }
+}
+
+@media (width >= 80rem) {
+  :root { --text-lg: bold 2rem/125% var(--font-family); }
 }
